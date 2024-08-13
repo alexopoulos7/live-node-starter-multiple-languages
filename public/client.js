@@ -8,7 +8,7 @@ const TRANSCRIPTION_LANGUAGES = [
 
 const maxReconnectInterval = 30000; // Maximum 30 seconds between reconnects
 const languageSelected = document.getElementById('listeningLanguage');
-
+const maxReconnectAttempts = 100;
 
 let sharedData = {
   sockets: [],
