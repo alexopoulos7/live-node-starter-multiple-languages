@@ -109,6 +109,8 @@ const servers = TRANSCRIPTION_LANGUAGES.map(languageObj => {
     ws.on("message", (message) => {
       console.log("Deepgram state is", deepgram.getReadyState());
       console.log(`Socket: Client data received ${language.toLowerCase()}`);
+      
+
       if (deepgram.getReadyState() === 1) {
         console.log(`Socket: Data sent to Deepgram ${language.toLowerCase()}`);
         deepgram.send(message);
